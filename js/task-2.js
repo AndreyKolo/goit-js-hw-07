@@ -11,12 +11,12 @@ const ingredients = [
 
 const ingredientItem = document.querySelector('#ingredients');
 
-ingredients.forEach((item) => {
+const AllIngredient = ingredients.map((item) => {
   const listItem = document.createElement('li');
-  // console.log(listItem)
   listItem.textContent = item;
-  ingredientItem.appendChild(listItem);
+  return listItem;
 });
+ingredientItem.append(...AllIngredient);
 
 //   Напиши скрипт, который для каждого элемента массива ingredients 
 //   создаст отдельный li, после чего вставит все li за одну операцию 
